@@ -1,30 +1,13 @@
-function thayDoiHinh(){
-    let lag = document.querySelectorAll(".dice-item");
-    console.log(lag[0]);
-    for(i=0 ;i<=5;i++){
-        switch(i){
-            case 1:
-                lag[0].src = "./img/dice1.png";
-                lag[1].src = "./img/dice2.png";
-                break;
-            case 2:
-                lag[0].src = "./img/dice1.png";
-                lag[1].src = "./img/dice3.png";
-                break;
-            case 3:
-                lag[0].src = "./img/dice1.png";
-                lag[1].src = "./img/dice4.png";
-                break;
-            case 4:
-                lag[0].src = "./img/dice1.png";
-                lag[1].src = "./img/dice5.png";
-                break;
-            case 5:
-                lag[0].src = "./img/dice2.png";
-                lag[1].src = "./img/dice3.png";
-                break;
-        }
-        
-    }
-   
+
+
+function thayDoiHinh(){  
+    let lag = document.getElementById("dice-1");
+    console.log(lag);
+    let lag2 = document.getElementById("dice-2");
+    let hamRanDom = Math.floor(Math.random()*6) + 1;
+    let hamRanDom2= Math.floor(Math.random()*6) + 1;
+    console.log(hamRanDom);
+    console.log(hamRanDom2);
+    lag.src = "/img/dice"+ hamRanDom +".png";
+    lag2.src ="/img/dice"+ hamRanDom2 +".png";
 }
